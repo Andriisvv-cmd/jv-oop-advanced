@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawble {
+public abstract class Figure implements Drawble, HasArea {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
-
-    public abstract double getArea();
 
     @Override
     public abstract void draw();

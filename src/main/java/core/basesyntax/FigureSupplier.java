@@ -3,21 +3,23 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int Number_Figures = 5;
+    private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int SIZE = 10;
+    private static final int MAX_SIZE = 50;
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(Number_Figures);
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
-        double side = random.nextInt(50);
-        double height = random.nextInt(50);
-        double width = random.nextInt(50);
-        double firstLeg = random.nextInt(50);
-        double secondLeg = random.nextInt(50);
-        double radius = random.nextInt(50);
-        double base1 = random.nextInt(50);
-        double base2 = random.nextInt(50);
+        double side = random.nextInt(MAX_SIZE);
+        double height = random.nextInt(MAX_SIZE);
+        double width = random.nextInt(MAX_SIZE);
+        double firstLeg = random.nextInt(MAX_SIZE);
+        double secondLeg = random.nextInt(MAX_SIZE);
+        double radius = random.nextInt(MAX_SIZE);
+        double base1 = random.nextInt(MAX_SIZE);
+        double base2 = random.nextInt(MAX_SIZE);
 
         switch (figureNumber) {
             case 0 : return new Square(color, side);
@@ -30,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("white", SIZE);
     }
 }
