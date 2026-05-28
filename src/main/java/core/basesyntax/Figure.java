@@ -9,6 +9,7 @@ public abstract class Figure implements Drawble {
 
     public abstract double getArea();
 
+    @Override
     public abstract void draw();
 
     public String getColor() {
