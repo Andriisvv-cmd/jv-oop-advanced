@@ -28,6 +28,7 @@ public class FigureSupplier {
             default : return new IsoscelesTrapezoid(color, base1, base2, height);
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
